@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  productservice:
+    image: productservice
+    build:
+      context: .
+      dockerfile: ProductService/Dockerfile
+    ports:
+      - "8001:80"
+
+  orderservice:
+    image: orderservice
+    build:
+      context: .
+      dockerfile: OrderService/Dockerfile
+    ports:
+      - "8002:80"
